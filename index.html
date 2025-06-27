@@ -34,43 +34,114 @@
   <meta name="apple-mobile-web-app-title" content="CBS" />
   <link rel="manifest" href="/site.webmanifest" />
 
+  <!-- Structured data -->
+   <script type='application/ld+json'>
+    {
+      "@context": "http://www.schema.org",
+      "@type": "Organization",
+      "name": "Bluewater Publishing",
+      "url": "https://cruisebooksource.com",
+      "sameAs": [
+        "https://www.cruisebooksource.com"
+      ],
+      "logo": "https://cruisebooksource.com/images/logo.svg",
+      "description": "Bluewater Publishing is the nation's premier provider of U.S. Navy and USMC Cruisebooks, Crew Portrait photography, U.S. Navy and USMC Achievement Certificates, and PAO/DV Products.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7348 Main Street",
+        "addressLocality": "Gloucester",
+        "addressRegion": "VA",
+        "postalCode": "23061",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "37.39870",
+        "longitude": "76.52269"
+      },
+      "openingHours": "Mo 08:00-16:00 Tu 08:00-16:00 We 08:00-16:00 Th 08:00-16:00 Fr 08:00-16:00"
+    }
+    </script>
+
+    <link r
+
 </head>
 <body>
-  <nav id="navbar">
 
-    <div class="nav-container">
-      <img src="/images/logo.svg" alt="Bluewater Publishing Logo" class="logo" />
-      <ul>
-          <li><a href="/" class="active">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/services">Services</a></li>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="navbar__container">
+      <img src="/images/logo.svg" alt="Bluewater Publishing Logo" class="navbar__logo" />
+      <ul class="navbar__list">
+          <li class="navbar__element"><a href="/" class=" navbar__link navbar__link--active">Home</a></li>
+          <li class="navbar__element"><a href="/about" class="navbar__link">About</a></li>
+          <li class="navbar__element"><a href="/contact" class="navbar__link">Contact</a></li>
+          <li class="navbar__element"><a href="/products" class="navbar__link">Products</a></li>
+          <li class="navbar__element"><a href="/services" class="navbar__link">Services</a></li>
         </ul>
     </div>
   </nav>
 
-  <div class="container">
-    <header>
-      <h1>Your Cruisebook Source.</h1>
-      <h3>Proud U.S. Navy & USMC Partner for over 30 years</h3>
-        <a class="internal" href="/products">See Products<a>
-        <a class="internal" href="/services">See Services</a>
-    </header>
-    <main>
-      <article class="card">
-        <h2>Create & Publish</h2>
-        <p>Get in touch with our design team to publish a cruisebook or produce one of our many U.S. Navy certificates for your command.</p>
-        <a class="internal" href="/request-a-quote">Request a Quote</a>
-      </article>
-      <article class="card">
-        <h2>Browse Existing</h2>
-        <p>Looking for a previous cruisebook? Take a look at our extensive catalog.</p>
-        <a class="external" href="https://buymycruisebook.com" taget="_blank" rel="noopener noreferrer">Browse cruisebooks</a>
-      </article>
-    </main>
+  <header class="hero centered">
+      <h1 class="hero__title">Your Cruisebook Source.</h1>
+      <h3 class="hero__subtitle">PROUD U.S. NAVY & USMC PARTNER FOR OVER 30 YEARS</h3>
+      <div class="rows">
+        <a class="link-button" href="/products">See Products</a>
+        <a class="link-button link-button--inverted" href="/services">See Services</a>
+      </div>
+  </header>
 
-  </div>
+  <main class="container">
+    <section class="rows">
+        <article class="card">
+          <h2 class="card__title">Create & Publish</h2>
+          <p class="card__text">Get in touch with our design team to publish a cruisebook or produce one of our many U.S. Navy certificates for your command.</p>
+          <a class="link-button link-button--card" href="/request-a-quote">Request a Quote</a>
+        </article>
+        <article class="card">
+          <h2 class="card__title">Browse Existing</h2>
+          <p class="card__text">Looking for a previous cruisebook? Take a look at our extensive catalog.</p>
+          <a class="link-button link-button--card" href="https://buymycruisebook.com" target="_blank" rel="noopener noreferrer">Browse cruisebooks</a>
+        </article>
+    </section>
 
+    <section class="centered">
+      <h2 class="title">What Our Customers Say</h2>
+
+      <div class="rows">
+
+        <button class="arrow-button"><span class="arrow arrow--left"></span></button>
+
+        <article class="card">
+          <h2 class="card__title">USS Howard (DDG 83)</h2>
+          <h3 class="card__subtitle">CRUISEBOOK COORDINATOR</h3>
+          <p class="card__text">"Got the books in yesterday and they look awesome! Thanks again for the great communication and hard work."</p>
+          <a class="link-button link-button--card" href="/request-a-quote">Request a Quote</a>
+        </article>
+
+        <button class="arrow-button"><span class="arrow arrow--right"></span></button>
+
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot__container">
+
+      <ul class="foot__copyright">
+        <li class="foot__text">&copy; 2025 Bluewater Publishing</li>
+        <li class="foot__text foot__text--subtle">Website by Zakeri Reckmeyer</li>
+      </ul>
+
+      <ul class="foot__list">
+        <li class="foot__text">Bluewater Publishing</li>
+        <li class="foot__text">7348 Main Street</li>
+        <li class="foot__text">Gloucester, VA 23061</li>
+        <li class="foot__text">(800) 323-0578</li>
+        <li class="foot__text"><a class="foot__email" href="mailto:support@cruisebooksource.com">support@cruisebooksource.com</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
