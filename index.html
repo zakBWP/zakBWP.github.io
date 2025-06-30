@@ -62,9 +62,7 @@
       "openingHours": "Mo 08:00-16:00 Tu 08:00-16:00 We 08:00-16:00 Th 08:00-16:00 Fr 08:00-16:00"
     }
     </script>
-
-    <link r
-
+    <script type="module" src="testimonialSwitcher.js"></script>
 </head>
 <body>
 
@@ -108,15 +106,25 @@
     <section class="centered">
       <h2 class="title">What Our Customers Say</h2>
 
-      <div class="rows">
+      <div class="testimonials">
 
         <button class="arrow-button"><span class="arrow arrow--left"></span></button>
 
-        <article class="card">
-          <h2 class="card__title">USS Howard (DDG 83)</h2>
+        <article class="card card--testimonial">
+          <h2 class="card__title">USS Bataan (LHD 5)</h2>
           <h3 class="card__subtitle">CRUISEBOOK COORDINATOR</h3>
-          <p class="card__text">"Got the books in yesterday and they look awesome! Thanks again for the great communication and hard work."</p>
-          <a class="link-button link-button--card" href="/request-a-quote">Request a Quote</a>
+          <p class="card__text">Thank you for the awesome product! Our cruise books have been widely reviewed as a superior representation of our deployment and command. Thank you for the excellent work!</p>
+
+          <div class="testimonials__dot-container">
+            <!-- Populated with JS -->
+          </div>
+        </article>
+
+        <article class="card card--testimonial card--hidden">
+          <h2></h2>
+          <h3></h3>
+          <p></p>
+          <div class="testimonials__dot-container"></div>
         </article>
 
         <button class="arrow-button"><span class="arrow arrow--right"></span></button>
