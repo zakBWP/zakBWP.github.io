@@ -185,14 +185,10 @@ h1, h2 {
   background-color: var(--foreground);
   border-radius: var(--border);
   padding: 1rem;
-  flex: 50;
   height: 15rem;
   gap: 0.5rem;
-  /* max-width: 36rem; */
   width: 100%;
 
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out;
 }
 
 .card--hidden {
@@ -214,17 +210,6 @@ h1, h2 {
   margin-bottom: 1rem;
 }
 
-.card--testimonial {
-  opacity: 0;
-  position: absolute;
-  width: 50rem;
-  top: 0;
-  left: 0;
-}
-
-.card--testimonial--active {
-  opacity: 1;
-}
 
 /* Link Buttons */
 
@@ -250,22 +235,65 @@ h1, h2 {
 
 /* Testimonials */
 
-.testimonials {
+.testimonials__carousel {
+  width: 100%;
+  max-width: 45rem;
+  height: 15rem;
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-  max-width: 50rem;
+  justify-content: space-between;
   position: relative;
 }
 
+.testimonials__slide-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.testimonials__slide {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--foreground);
+  border-radius: var(--border);
+  padding: 1rem;
+  flex: 50;
+  /* height: 15rem; */
+  height: 100%;
+  gap: 0.5rem;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.testimonials__slide--active {
+  opacity: 1;
+}
+
+.testimonials__dot-container {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  gap: 0.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/* 
 .testimonials__dot-container {
   display: flex;
   width: 100%;
   margin-top: auto;
   justify-content: center;
   gap: 0.5rem;
-}
+  position: absolute
+} */
 
 .testimonials__dot {
   height: 1rem;
@@ -273,12 +301,31 @@ h1, h2 {
   background-color: var(--primary);
   border-radius: 50%;
   display: inline-block;
-  opacity: 25%
+  opacity: 25%;
+  cursor: pointer;
 }
 
 .testimonials__dot--active {
   opacity: 100%;
 }
+/* 
+.card--testimonial {
+  opacity: 0;
+  position: absolute;
+  width: 50rem;
+  top: 0;
+  left: 0;
+}
+
+.card--testimonial--active {
+  position: absolute;
+  opacity: 1;
+}
+
+.card__container {
+  position: relative;
+  width: 600px;
+} */
 
 .arrow-button {
   background-color: var(--primary);
@@ -288,6 +335,16 @@ h1, h2 {
   width: 3rem;
   border-radius: 50%;
   cursor: pointer;
+  position: static;
+  top: 2rem;
+}
+
+.arrow-button--left {
+  left: 0;
+}
+
+.arrow-button--right {
+  right: 0;
 }
 
 .arrow {
@@ -315,7 +372,7 @@ h1, h2 {
   /* Typically applied to h1s, but is used on the "What Our Customers Say" h2 */
   font-size: 2rem;
   color: var(--header-text);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
