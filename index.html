@@ -24,8 +24,10 @@
   <meta name="twitter:image" content="/images/social.webp">
 
   <!-- Styles -->
-  <link rel="stylesheet" type="text/css" href="/style.css" />
-
+  <link rel="stylesheet" type="text/css" href="/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/footer.css" />
+  
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -62,14 +64,24 @@
       "openingHours": "Mo 08:00-16:00 Tu 08:00-16:00 We 08:00-16:00 Th 08:00-16:00 Fr 08:00-16:00"
     }
     </script>
+    <script type="module" src="hamburgerMenu.js"></script>
     <script type="module" src="testimonialSwitcher.js"></script>
 </head>
 <body>
 
-
   <nav class="navbar" aria-label="Main navigation">
     <div class="navbar__container">
-      <img src="/images/logo.svg" alt="Bluewater Publishing Logo" class="navbar__logo" />
+
+      <div class="navbar__mobile-view">
+        <img src="/images/logo.svg" alt="Bluewater Publishing Logo" class="navbar__logo" />
+        <button class="navbar__hamburger">
+          <span class="navbar__hamburger-line"></span>
+          <span class="navbar__hamburger-line"></span>
+          <span class="navbar__hamburger-line"></span>
+        </button>
+      </div>
+      
+      
       <ul class="navbar__list">
           <li class="navbar__element"><a href="/" class=" navbar__link navbar__link--active">Home</a></li>
           <li class="navbar__element"><a href="/about" class="navbar__link">About</a></li>

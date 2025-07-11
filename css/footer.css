@@ -1,0 +1,46 @@
+/* Footer */
+
+.foot {
+  width: 100%;
+  background-color: var(--navbar);
+  color: white;
+}
+
+.foot__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.foot__list {
+  text-align: end;
+}
+
+.foot__text {
+  list-style-type: none;
+}
+
+.foot__text--subtle {
+  color: #878b94;
+}
+
+.foot__email {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 810px) {
+
+  .foot__container {
+    flex-direction: column;
+  }
+
+  .foot__list {
+    text-align: center;
+  }
+
+}

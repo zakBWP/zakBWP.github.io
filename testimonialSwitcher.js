@@ -19,7 +19,7 @@ function getElements() {
     throw new Error("Could not find all testimonial Slide elements, preserving default innerHTML...")
   }
 
-  carouselTimer = setInterval(() => setTestimonial(index + 1), DELAY_MS, true)
+  startTimer()
 
   addSlides()
   addDots()
@@ -28,59 +28,67 @@ function getElements() {
   leftArrow.parentNode.addEventListener("click", () => setTestimonial(index - 1))
 
   container.addEventListener("touchstart", () => setTestimonial(index + 1))
+}
 
+function startTimer() {
+  carouselTimer = setInterval(() => setTestimonial(index + 1), DELAY_MS)
+}
+
+function resetTimer() {
+  if (carouselTimer) {
+    clearInterval(carouselTimer)
+  }
+  startTimer()
 }
 
 function addSlides() {
-
-  let title, subtitle, text
-
   for (let i = 0; i < testimonials.length; i++) {
+    const newSlide = document.createElement("article");
+    newSlide.classList.add("testimonials__slide");
 
-    let newSlide = document.createElement("article")
-    newSlide.classList.add("testimonials__slide")
+    const title = document.createElement("h2");
+    title.classList.add("card__title");
+    title.textContent = testimonials[i].title;
 
-    title = newSlide.appendChild(document.createElement("h2"))
-    title.classList.add("card__title")
-    title.textContent = testimonials[i].title
+    const subtitle = document.createElement("h3");
+    subtitle.classList.add("card__subtitle");
+    subtitle.textContent = testimonials[i].subtitle;
 
-    subtitle = newSlide.appendChild(document.createElement("h3"))
-    subtitle.classList.add("card__subtitle")
-    subtitle.textContent = testimonials[i].subtitle
+    const text = document.createElement("p");
+    text.classList.add("card__text");
+    text.textContent = testimonials[i].text;
 
-    text = newSlide.appendChild(document.createElement("p"))
-    text.classList.add("card__text")
-    text.textContent = testimonials[i].text
+    newSlide.appendChild(title);
+    newSlide.appendChild(subtitle);
+    newSlide.appendChild(text);
 
-    if (i == 0) newSlide.classList.add("testimonials__slide--active")
+    if (i === 0) {
+      newSlide.classList.add("testimonials__slide--active");
+    }
     
-    container.appendChild(newSlide)
+    container.appendChild(newSlide);
   }
-
-  return container.querySelectorAll(".testimonials__slide")
 }
 
 function addDots() {
   for (let i = 0; i < testimonials.length; i++) {
+    const newSpan = document.createElement("span");
+    newSpan.classList.add("testimonials__dot");
+    newSpan.setAttribute("aria-label", `Go to slide ${i + 1}`);
 
-    let newSpan = document.createElement("span")
-    newSpan.classList.add("testimonials__dot")
-
-    if (i == 0) newSpan.classList.add("testimonials__dot--active")
+    if (i === 0) {
+      newSpan.classList.add("testimonials__dot--active");
+    }
     
-    newSpan.addEventListener("click", () => setTestimonial(i))
-
-    dotContainer.appendChild(newSpan)
+    newSpan.addEventListener("click", () => setTestimonial(i));
+    dotContainer.appendChild(newSpan);
   }
-
-  return dotContainer.children
 }
 
 /* Takes in an index number, can move anywhere */
 function setTestimonial(desiredIndex) {
 
-  clearInterval(carouselTimer)
-  carouselTimer = setInterval(() => setTestimonial(index + 1), DELAY_MS, true)
+  resetTimer()
 
   let previousIndex = index
 
@@ -92,25 +100,32 @@ function setTestimonial(desiredIndex) {
     index = desiredIndex
   }
 
-  let currentSlide = container.children[index]
-  currentSlide.classList.add("testimonials__slide--active")
+  if (index === previousIndex) return
 
-  let previousSlide = container.children[previousIndex]
-  previousSlide.classList.remove("testimonials__slide--active")
+  const slides = container.children
+  slides[index].classList.add("testimonials__slide--active")  
+  slides[previousIndex].classList.remove("testimonials__slide--active")
 
-  let currentDot = dotContainer.children[index]
-  currentDot.classList.add("testimonials__dot--active")
-
-  let previousDot = dotContainer.children[previousIndex]
-  previousDot.classList.remove("testimonials__dot--active")
+  const dots = dotContainer.children
+  dots[index].classList.add("testimonials__dot--active")
+  dots[previousIndex].classList.remove("testimonials__dot--active")
 }
 
 (function() {
   try {
     getElements()
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        if (carouselTimer) {
+          clearInterval(carouselTimer)
+        }
+      } else {
+        startTimer()
+      }
+    })
+
   } catch(error) {
     console.error(error)
     return
-  }
+  } 
 })()
-
