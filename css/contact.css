@@ -1,0 +1,38 @@
+.contact__container {
+  max-width: 60rem;
+  width: 100%;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.contact__image {
+  border-radius: var(--border);
+}
+
+.contact__caption {
+  color: var(--body-text);
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact__label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact__input {
+
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background: transparent;
+  color: #505050;
+  font-size: inherit;
+}

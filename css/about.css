@@ -1,0 +1,24 @@
+.about__container {
+  padding: 2rem;
+  border-radius: var(--border);
+  background-color: var(--foreground);
+}
+
+.about__image {
+  max-height: 20rem;
+  filter: drop-shadow(var(--shadow));
+}
+
+.about__emphasis {
+  color: var(--primary);
+}
+
+.dropcap::first-letter {
+  color: var(--primary);
+  float: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 7rem;
+  line-height: 5.25rem;
+  padding-right: 0.5rem;
+}
+

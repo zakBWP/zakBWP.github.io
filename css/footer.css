@@ -4,6 +4,7 @@
   width: 100%;
   background-color: var(--navbar);
   color: white;
+  /* margin-top: auto; */
 }
 
 .foot__container {
