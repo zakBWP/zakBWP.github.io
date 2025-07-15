@@ -51,7 +51,7 @@ h1, h2 {
   margin: 0 auto;
   padding: 3rem 1rem;
   gap: 3rem;
-  /* min-height: 100vh; */
+  width: 100vw;
 }
 
 .centered {
@@ -89,6 +89,7 @@ h1, h2 {
 .title { 
   /* Typically applied to h1s, but is used on the "What Our Customers Say" h2 */
   font-size: 2rem;
+  /* margin-top: 3rem; */
   color: var(--header-text);
   margin-bottom: 2rem;
   text-align: center;
@@ -97,5 +98,9 @@ h1, h2 {
 @media (max-width: 810px) {
   .rows {
     flex-direction: column;
+  }
+
+  .container {
+    gap: 2rem;
   }
 }
