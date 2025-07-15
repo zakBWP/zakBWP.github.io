@@ -82,7 +82,7 @@
 .testimonials__carousel {
   width: 100%;
   max-width: 45rem;
-  height: 15rem;
+  height: 20rem;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -187,5 +187,12 @@
 
   .card--testimonial {
     height: 23rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .link-button {
+    width: 100%;
+    text-align: center;
   }
 }

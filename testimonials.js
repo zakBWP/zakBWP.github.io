@@ -21,12 +21,6 @@ export default [
 			"Thank you so much for all of your help throughout this process and for making it so easy. We appreciate receiving such a good product in such a short amount of time."
 	},
 	{
-		"title": "USS James E. Williams (DDG 95)",
-		"subtitle": "CRUISEBOOK COORDINATOR",
-		"text":
-			"The coordination, the communication, the responsiveness was amazing. We created an ENTIRE cruisebook on deployment and underway. From beginning to end I would rate this company 15/10. NO COMPETITION. THE BEST! Thank you all SO MUCH!"
-	},
-	{
 		"title": "USS Howard (DDG 83)",
 		"subtitle": "CRUISEBOOK COORDINATOR",
 		"text":

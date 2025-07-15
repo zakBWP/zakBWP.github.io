@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
 	<!-- HTML Meta Tags -->
-  <title>About | Bluewater Publishing</title>
+  <title>Contact | Bluewater Publishing</title>
   <meta name="description" content="Contact Bluewater Publishing, the nation's premier provider of U.S. Navy and USMC Cruisebooks, Crew Portrait photography, U.S. Navy and USMC Achievement Certificates, and PAO/DV Products.">
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://cruisebooksource.com">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bluewater Publishing: Cruisebook Source">
-  <meta property="og:description" content="About Bluewater Publishing, the nation's premier provider of U.S. Navy and USMC Cruisebooks, Crew Portrait photography, U.S. Navy and USMC Achievement Certificates, and PAO/DV Products.">
+  <meta property="og:description" content="Contact Bluewater Publishing, the nation's premier provider of U.S. Navy and USMC Cruisebooks, Crew Portrait photography, U.S. Navy and USMC Achievement Certificates, and PAO/DV Products.">
   <meta property="og:image" content="/images/social.webp">
 
   <!-- Twitter Meta Tags -->
@@ -66,6 +66,7 @@
     }
     </script>
     <script type="module" src="hamburgerMenu.js"></script>
+    <script type="module" src="submitForm.js"></script>
 </head>
 <body>
 
@@ -97,6 +98,9 @@
 
     <section class="centered">
       <h1 class="title">Contact</h1>
+
+      <p>For questions about your cruisebook or portrait order, please contact us:</p>
+
       <div class="rows contact__container">
         <div class="contact__image-container">
           <img
@@ -108,27 +112,51 @@
             Or come visit our Cruisebook Design Center in Virginia. Just look for the lighthouse!
         </div>
 
-        <form class="contact__form">
+        <form class="contact__form" id="contactForm">
+        <input
+					type="hidden"
+					name="subject"
+					value="Message from cruisebooksource.com"
+				/>
+				<input type="hidden" name="from_name" value="Cruisebook Source" />
 
-            <div>
-              <label class="contact__label" for="name">Name</label>
-              <input class="contact__input" type="text" id="name" name="name" placeholder="Enter your name" required>
-            </div>
+          <div>
+            <label class="contact__label" for="name">Name</label>
+            <input class="contact__input" type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
 
-            <div>
-              <label class="contact__label" for="email">Email</label>
-              <input class="contact__input" type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
+          <div>
+            <label class="contact__label" for="email">Email</label>
+            <input class="contact__input" type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
 
-            <div>
-              <label class="contact__label" for="message">Message</label>
-              <textarea class="contact__input" id="message" name="message" placeholder="Enter your message" required></textarea>
-            </div>
+          <div>
+            <label class="contact__label" for="message">Message</label>
+            <textarea class="contact__input" id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+          </div>
 
-          <button type="submit" class="link-button link-button--wide">Send Message</button>
+          <button type="submit" class="link-button link-button--wide" id="submitButton">Send Message</button>
         </form>
 
       </div>
+    </section>
+
+    <section class="rows">
+        <article class="info">
+          <img src="images/contact-hours.svg" alt="Office Hours" class="contact__icon">
+          <h2 class="info__title">Office Hours</h2>
+          <p>Mon - Fri 9:00AM - 4:00PM EST</p>
+        </article>
+        <article class="info">
+          <img src="images/contact-location.svg" alt="Office Location" class="contact__icon">
+          <h2 class="info__title">Office Location</h2>
+          <p>7348 Main St, Gloucester, VA 23061</p>
+        </article>
+        <article class="info">
+          <img src="images/contact-phone.svg" alt="Office Phone" class="contact__icon">
+          <h2 class="info__title">Phone</h2>
+          <p>(800) 323-0578</p>
+        </article>
     </section>
 
 

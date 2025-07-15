@@ -1,16 +1,24 @@
 .contact__container {
-  max-width: 60rem;
   width: 100%;
+  max-width: 60rem;
   gap: 2rem;
+  margin: 2rem 0;
   align-items: flex-start;
+  color: var(--body-text);
+}
+
+.contact__image-container {
+  width: 100%;
 }
 
 .contact__image {
   border-radius: var(--border);
+  display: block;
+  width: 100%;
 }
 
 .contact__caption {
-  color: var(--body-text);
+  margin-top: 0.5rem;
 }
 
 .contact__form {
@@ -24,15 +32,47 @@
 .contact__label {
   display: block;
   margin-bottom: 0.5rem;
+  /* color: inherit; */
 }
 
 .contact__input {
-
   width: 100%;
   padding: 0.5rem;
   border: 2px solid #ddd;
+  color: var(--body-text);
   border-radius: 6px;
   background: transparent;
-  color: #505050;
   font-size: inherit;
+}
+
+.contact__input::placeholder {
+  opacity: 0.6;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.info__title h2 {
+  font-size: 1.75rem;
+}
+
+.contact__icon {
+  height: 2.5rem;
+  /* fill: var(--primary); */
+}
+
+
+
+@media (max-width: 810px) {
+
+  
+  .contact__image-container {
+    display: none;
+  }
+  
 }

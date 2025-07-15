@@ -7,6 +7,7 @@
 .about__image {
   max-height: 20rem;
   filter: drop-shadow(var(--shadow));
+  max-width: 100%;
 }
 
 .about__emphasis {
@@ -22,3 +23,12 @@
   padding-right: 0.5rem;
 }
 
+@media (max-width: 480px) {
+  .about__container {
+    background-color: transparent;
+    padding: 0;
+   }
+   .about__image {
+    display: none;
+   }
+}
