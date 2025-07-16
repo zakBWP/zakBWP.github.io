@@ -1,18 +1,20 @@
 :root {
-	--primary: #172554;
-	--secondary: #1d4ed8;
-	--foreground: #f5f5f5;
-	--background: #ffffff;
-	--header-text: #0f1728;
-	--body-text: #555555;
+  --primary: #172554;
+  --secondary: #1d4ed8;
+  --foreground: #f5f5f5;
+  --background: #ffffff;
+  --header-text: #0f1728;
+  --body-text: #555555;
   --navbar: #0f1728;
   --subtitle: #707070;
 
   --border: 0.5rem;
-  --shadow: 2px 2px 7px rgba(0, 0, 0, 0.33);
+  --shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,7 +22,7 @@
 }
 
 body {
-  /* Treating the body as a flexbox allows our footer to utilize 'margin-top: auto'*/ 
+  /* Treating the body as a flexbox allows our footer to utilize 'margin-top: auto'*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,11 +35,12 @@ p {
   color: var(--body-text);
 }
 
-p + p {
+p+p {
   margin-top: 0.625rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: var(--header-text);
 }
@@ -49,7 +52,7 @@ h1, h2 {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 6rem;
   gap: 3rem;
   width: 100vw;
 }
@@ -70,7 +73,8 @@ h1, h2 {
 /* Link Buttons */
 
 .link-button {
-  display: inline-block; /* Required so that the parent respects the link's height with padding */
+  display: inline-block;
+  /* Required so that the parent respects the link's height with padding */
   background-color: var(--primary);
   color: white;
   text-decoration: none;
@@ -86,7 +90,7 @@ h1, h2 {
   width: 100%;
 }
 
-.title { 
+.title {
   /* Typically applied to h1s, but is used on the "What Our Customers Say" h2 */
   font-size: 2rem;
   /* margin-top: 3rem; */
