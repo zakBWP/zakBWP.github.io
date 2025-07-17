@@ -1,0 +1,11 @@
+.certificate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 810px) {
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+}

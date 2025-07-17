@@ -1,80 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" /> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="canonical" href="https://www.cruisebooksource.com/services">
-	<!-- HTML Meta Tags -->
+  <!-- HTML Meta Tags -->
   <title>Services | Bluewater Publishing</title>
-  <meta name="description" content="Bluewater Publishing offers various professional services, including crew portrait photography, cruisebook design services, marketing, and order fulfillment.">
+  <meta name="description"
+    content="Bluewater Publishing offers various professional services, including crew portrait photography, cruisebook design services, marketing, and order fulfillment.">
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://www.cruisebooksource.com/services">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Services | Bluewater Publishing">
-  <meta property="og:description" content="Bluewater Publishing offers various professional services, including crew portrait photography, cruisebook design services, marketing, and order fulfillment.">
+  <meta property="og:description"
+    content="Bluewater Publishing offers various professional services, including crew portrait photography, cruisebook design services, marketing, and order fulfillment.">
   <meta property="og:image" content="/images/social.webp">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.cruisebooksource.com/services">
   <meta name="twitter:title" content="Services | Bluewater Publishing">
-  <meta name="twitter:description" content="Bluewater Publishing offers various professional services, including crew portrait photography, cruisebook design services, marketing, and order fulfillment.">
+  <meta name="twitter:description"
+    content="Bluewater Publishing offers various professional services, including crew portrait photography, cruisebook design services, marketing, and order fulfillment.">
   <meta name="twitter:image" content="/images/social.webp">
 
   <!-- Styles -->
-  <link rel="stylesheet" type="text/css" href="/css/global.css" />
-  <link rel="stylesheet" type="text/css" href="/css/products.css" />
-  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
-  <link rel="stylesheet" type="text/css" href="/css/footer.css" />
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="CBS" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" type="text/css" href="/css/global.css">
+  <link rel="stylesheet" type="text/css" href="/css/products.css">
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="/css/footer.css">
 
-  <!-- Structured data -->
-   <script type='application/ld+json'>
-    {
-      "@context": "http://www.schema.org",
-      "@type": "Organization",
-      "name": "Bluewater Publishing",
-      "url": "https://www.cruisebooksource.com",
-      "sameAs": [
-        "https://www.cruisebooksource.com"
-      ],
-      "logo": "https://www.cruisebooksource.com/images/logo.svg",
-      "description": "Bluewater Publishing offers various professional services, including crew portrait photography, cruisebook design services, marketing, and order fulfillment.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "7348 Main Street",
-        "addressLocality": "Gloucester",
-        "addressRegion": "VA",
-        "postalCode": "23061",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "37.39870",
-        "longitude": "76.52269"
-      },
-      "openingHours": "Mo 08:00-16:00 Tu 08:00-16:00 We 08:00-16:00 Th 08:00-16:00 Fr 08:00-16:00"
-    }
-    </script>
-    <script type="module" src="scripts/hamburgerMenu.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="CBS">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <script type="module" src="scripts/hamburgerMenu.js"></script>
 </head>
+
 <body>
 
   <!-- Navbar -->
-
   <nav class="navbar" aria-label="Main navigation">
     <div class="navbar__container">
       <div class="navbar__mobile-view">
-        <img src="/images/logo.svg" alt="Bluewater Publishing Logo" class="navbar__logo" />
+        <img src="/images/logo.svg" alt="Bluewater Publishing Logo" class="navbar__logo">
         <button class="navbar__hamburger">
           <span class="navbar__hamburger-line"></span>
           <span class="navbar__hamburger-line"></span>
@@ -82,63 +57,76 @@
         </button>
       </div>
       <ul class="navbar__list">
-          <li class="navbar__element"><a href="/" class=" navbar__link">Home</a></li>
-          <li class="navbar__element"><a href="/about" class="navbar__link">About</a></li>
-          <li class="navbar__element"><a href="/contact" class="navbar__link">Contact</a></li>
-          <li class="navbar__element"><a href="/products" class="navbar__link">Products</a></li>
-          <li class="navbar__element"><a href="/services" class="navbar__link navbar__link--active">Services</a></li>
-        </ul>
+        <li class="navbar__element"><a href="/" class=" navbar__link">Home</a></li>
+        <li class="navbar__element"><a href="/about" class="navbar__link">About</a></li>
+        <li class="navbar__element"><a href="/contact" class="navbar__link">Contact</a></li>
+
+        <li class="products-dropdown">
+          <div class="navbar__element"><a href="/products" class="navbar__link">Products</a></div>
+
+          <ul class="products-dropdown__content">
+            <li><a href="/cruisebooks">Cruisebooks</a></li>
+            <li><a href="/certificates">Certificates</a></li>
+          </ul>
+
+        </li>
+
+        <li class="navbar__element"><a href="/services" class="navbar__link navbar__link--active">Services</a></li>
+      </ul>
     </div>
   </nav>
-
   <!-- End Navbar -->
 
-    <main class="container">
-      <section>
+  <main class="container">
+    <section>
       <h1 class="title">Services</h1>
-      
-        <article class="rows product-container">
-          <!-- <div class="rows product-wrapper"> -->
-            <img class="product__image" src="/images/services-photography.webp" alt="Crew Portrait Photography">
-            <div class="product__details">
-              <h2 class="product__title">Crew Portrait Photography</h2>
-              <p class="product__description">Our photographers travel the world to create professional studio portraits of your crew members for no additional cost..</p>
-            </div>
-          <!-- </div> -->
-        </article>
 
-        <article class="rows product-container">
-          <!-- <div class="rows product-wrapper"> -->
-            <img class="product__image" src="/images/services-design.webp" alt="Design Services">
-            <div class="product__details">
-              <h2 class="product__title">Design Services</h2>
-              <p class="product__description">We'll do the work for you! Our on-staff professional designers will help build your cruisebook or design a certificate.</p>
-            </div>
-          <!-- </div> -->
-        </article>
+      <article class="rows product-container">
+        <!-- <div class="rows product-wrapper"> -->
+        <img class="product__image" src="/images/services-photography.webp" alt="Crew Portrait Photography">
+        <div class="product__details">
+          <h2 class="product__title">Crew Portrait Photography</h2>
+          <p class="product__description">Our photographers travel the world to create professional studio portraits of
+            your crew members for no additional cost..</p>
+        </div>
+        <!-- </div> -->
+      </article>
 
-        <article class="rows product-container">
-          <!-- <div class="rows product-wrapper"> -->
-            <img class="product__image" src="/images/services-marketing.webp" alt="Marketing">
-            <div class="product__details">
-              <h2 class="product__title">Marketing</h2>
-              <p class="product__description">Bluewater provides order forms, sales trackers, email marketing, and an online listing to help your Command meet their sales goal.</p>
-            </div>
-          <!-- </div> -->
-        </article>
-        
-          <article class="rows product-container">
-          <!-- <div class="rows product-wrapper"> -->
-            <img class="product__image" src="/images/services-fulfillment.webp" alt="Order Fulfillment">
-            <div class="product__details">
-              <h2 class="product__title">Order Fulfillment</h2>
-              <p class="product__description">We offer individual book mailing, cover customization, and full office support to ensure delivery of each and every book.</p>
-            </div>
-          <!-- </div> -->
-        </article>
+      <article class="rows product-container">
+        <!-- <div class="rows product-wrapper"> -->
+        <img class="product__image" src="/images/services-design.webp" alt="Design Services">
+        <div class="product__details">
+          <h2 class="product__title">Design Services</h2>
+          <p class="product__description">We'll do the work for you! Our on-staff professional designers will help build
+            your cruisebook or design a certificate.</p>
+        </div>
+        <!-- </div> -->
+      </article>
 
-        </section>
-      </main>
+      <article class="rows product-container">
+        <!-- <div class="rows product-wrapper"> -->
+        <img class="product__image" src="/images/services-marketing.webp" alt="Marketing">
+        <div class="product__details">
+          <h2 class="product__title">Marketing</h2>
+          <p class="product__description">Bluewater provides order forms, sales trackers, email marketing, and an online
+            listing to help your Command meet their sales goal.</p>
+        </div>
+        <!-- </div> -->
+      </article>
+
+      <article class="rows product-container">
+        <!-- <div class="rows product-wrapper"> -->
+        <img class="product__image" src="/images/services-fulfillment.webp" alt="Order Fulfillment">
+        <div class="product__details">
+          <h2 class="product__title">Order Fulfillment</h2>
+          <p class="product__description">We offer individual book mailing, cover customization, and full office support
+            to ensure delivery of each and every book.</p>
+        </div>
+        <!-- </div> -->
+      </article>
+
+    </section>
+  </main>
 
   <!-- Footer -->
 
@@ -155,13 +143,14 @@
         <li class="foot__text">7348 Main Street</li>
         <li class="foot__text">Gloucester, VA 23061</li>
         <li class="foot__text">(800) 323-0578</li>
-        <li class="foot__text"><a class="foot__email" href="mailto:support@cruisebooksource.com">support@cruisebooksource.com</a></li>
+        <li class="foot__text"><a class="foot__email"
+            href="mailto:support@cruisebooksource.com">support@cruisebooksource.com</a></li>
       </ul>
     </div>
   </footer>
 
   <!-- End Footer -->
 
-  </body>
+</body>
 
 </html>

@@ -54,9 +54,9 @@
   background-color: var(--primary);
 }
 
-/* .products-dropdown:hover .navbar__link {
+.products-dropdown:hover .navbar__link {
   background-color: var(--primary);
-} */
+}
 
 .navbar__link--hidden {
   display: none;
@@ -106,7 +106,7 @@
 }
 
 /* Change color of dropdown links on hover */
-.products-dropdown a:hover {
+.products-dropdown__content a:hover {
   background-color: #ddd;
 }
 
@@ -114,6 +114,7 @@
   display: none;
   position: absolute;
   background-color: var(--foreground);
+  list-style-type: none;
 
   min-width: 6.5rem;
   width: 100%;
