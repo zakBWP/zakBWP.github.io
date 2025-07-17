@@ -3,7 +3,7 @@
 .foot {
   width: 100%;
   background-color: var(--navbar);
-  color: rgb(163, 176, 200);
+  color: var(--subtle);
   margin-top: auto;
 }
 

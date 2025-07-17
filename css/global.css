@@ -7,6 +7,7 @@
   --body-text: #555555;
   --navbar: #0f1728;
   --subtitle: #707070;
+  --subtle: #a3b0c8;
 
   --border: 0.5rem;
   --shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
@@ -18,7 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -39,9 +40,13 @@ p+p {
   margin-top: 0.625rem;
 }
 
+/*
+ Cambria    83% Windows   35% Mac
+ Georgia    99% Windows   97% Mac 
+*/
 h1,
 h2 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Georgia, serif;
   color: var(--header-text);
 }
 
@@ -106,5 +111,9 @@ h2 {
 
   .container {
     gap: 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
   }
 }

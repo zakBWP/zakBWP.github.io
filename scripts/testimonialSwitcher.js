@@ -1,6 +1,6 @@
 // testimonialSwitcher.js
 
-import testimonials from "./testimonials.js";
+import testimonials from "../data/testimonials.js";
 
 let carousel, container, rightArrow, leftArrow, dotContainer
 
