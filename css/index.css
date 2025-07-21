@@ -32,50 +32,11 @@
   text-align: center;
 }
 
-/* Card */
-
-.card {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--foreground);
-  border-radius: var(--border);
-  padding: 1rem;
-  height: 15rem;
-  gap: 0.5rem;
-  width: 100%;
-}
-
-.card--hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.card__title {
-  font-size: 1.75rem;
-}
-
-.card__subtitle {
-  color: var(--subtitle);
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-}
-
-.card__text {
-  margin-bottom: 1rem;
-}
-
 /* Link Buttons */
 
 .link-button--inverted {
   background-color: var(--foreground);
   color: var(--primary);
-}
-
-.link-button--card {
-  align-self: flex-end;
-  /* Aligns to the right of the card */
-  margin-top: auto;
-  /* Aligns to the bottom of the card */
 }
 
 /* Testimonials */
