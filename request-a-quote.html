@@ -76,7 +76,132 @@
   <!-- End Navbar -->
 
   <main class="container">
+    <section class="centered">
 
+      <h1 class="title">Request a Quote</h1>
+
+      <div class="quote-dropdown">
+        <label class="quote-dropdown__label" for="item-select">Choose item:</label>
+        <select name="items" id="item-select" class="quote-dropdown__select">
+          <option disabled selected>Select from dropdown</option>
+          <option value="cruisebook">Cruisebook</option>
+          <option value="certificate">Certificate</option>
+        </select>
+      </div>
+
+      <form class="quote-form" id="quote-form--certificate">
+        <div class="quote-form__group">
+          <label class="quote-form__label">
+            Full Name
+            <input name="name" autocomplete="on" type="text" class="quote__input" placeholder="Enter your name">
+          </label>
+
+          <label class="quote-form__label">
+            Email Address
+            <input name="email" autocomplete="on" type="email" class="quote__input" placeholder="Enter your email">
+          </label>
+        </div>
+        <div class="quote-form__group">
+          <label class="quote-form__label">
+            Phone Number
+            <input name="phone" autocomplete="on" type="tel" class="quote__input" placeholder="Enter your phone number">
+          </label>
+
+          <label class="quote-form__label">
+            Ship or Unit
+            <input name="ship" autocomplete="on" type="text" class="quote__input" placeholder="Enter your ship or unit">
+          </label>
+        </div>
+        <div class="quote-form__group">
+          <label class="quote-form__label">
+            Approximate Number of Certificates
+            <input name="numcerts" autocomplete="on" type="number" class="quote__input" min="10"
+              placeholder="Enter your phone number">
+          </label>
+          <label class="quote-form__label">
+            Certificate Style
+            <select name="certstyles" id="cert-select" class="quote-dropdown__select">
+              <option disabled selected>Select from dropdown</option>
+
+              <option value="Bluenose">Bluenose</option>
+              <option value="Bab-al-Mandeb">Bab-al-Mandeb</option>
+              <option value="Shellback">Shellback</option>
+              <option value="Suez Transit">Suez Transit</option>
+              <option value="Order of the Rock (STROG)">Order of the Rock (STROG)</option>
+              <hr>
+              <option value="Around the World (Magellan)">Around the World (Magellan)</option>
+              <option value="Order of the Ditch (Panama Canal)">Order of the Ditch (Panama Canal)</option>
+              <option value="Domain of the Golden Dragon">Domain of the Golden Dragon</option>
+              <option value="Strait of Hormuz">Strait of Hormuz</option>
+              <option value="Strait of Magellan">Strait of Magellan</option>
+              <option value="Persian Excursion">Persian Excursion</option>
+              <option value="Spanish Main">Spanish Main</option>
+              <option value="Other">Other</option>
+              <!-- <option value="Decommissioning">Decommissioning</option>
+              <option value="Plankowner">Plankowner</option>
+              <option value="Realm of the Czars (Black Sea)">Realm of the Czars (Black Sea)</option> -->
+            </select>
+          </label>
+        </div>
+        <label class="quote-form__label">
+          Home Port or Base Location
+          <input name="homeport" autocomplete="on" type="text" class="quote__input"
+            placeholder="Enter your home port/base">
+        </label>
+        <label class="quote-form__label">
+          Questions or Comments
+          <textarea class="quote__input" name="message" placeholder="Enter your message" rows="3"></textarea>
+        </label>
+        <!-- <button type="submit" class="link-button link-button--wide" id="submitQuote">Request a quote</button> -->
+      </form>
+
+      <form class="quote-form" id="quote-form--cruisebook">
+        <div class="quote-form__group">
+          <label class="quote-form__label">
+            Full Name
+            <input name="name" autocomplete="on" type="text" class="quote__input" placeholder="Enter your name">
+          </label>
+
+          <label class="quote-form__label">
+            Email Address
+            <input name="email" autocomplete="on" type="email" class="quote__input" placeholder="Enter your email">
+          </label>
+        </div>
+        <div class="quote-form__group">
+          <label class="quote-form__label">
+            Phone Number
+            <input name="phone" autocomplete="on" type="tel" class="quote__input" placeholder="Enter your phone number">
+          </label>
+
+          <label class="quote-form__label">
+            Ship or Unit
+            <input name="ship" autocomplete="on" type="text" class="quote__input" placeholder="Enter your ship or unit">
+          </label>
+        </div>
+        <div class="quote-form__group">
+          <label class="quote-form__label">
+            Approximate Number of Books
+            <input name="numbooks" autocomplete="on" type="number" class="quote__input" min="50"
+              placeholder="Enter number of books (minimum: 50)">
+          </label>
+          <label class="quote-form__label">
+            Approximate Number of Pages
+            <input name="numpages" autocomplete="on" type="number" class="quote__input" min="48"
+              placeholder="Enter number of pages (minimum: 48)">
+          </label>
+        </div>
+        <label class="quote-form__label">
+          Home Port or Base Location
+          <input name="homeport" autocomplete="on" type="text" class="quote__input"
+            placeholder="Enter your home port/base">
+        </label>
+        <label class="quote-form__label">
+          Questions or Comments
+          <textarea class="quote__input" name="message" placeholder="Enter your message" rows="3"></textarea>
+        </label>
+      </form>
+
+    </section>
 
   </main>
 

@@ -1,4 +1,5 @@
-const submitButton = document.getElementById("submitButton")
+const submitButton = document.getElementById("submitContact") || document.getElementById("submitQuote")
+
 const contactForm = document.getElementById("contactForm")
 
 contactForm.addEventListener("submit", async (event) => {
@@ -7,7 +8,6 @@ contactForm.addEventListener("submit", async (event) => {
 
   const formData = new FormData(contactForm)
   formData.append("access_key", "277083ff-40aa-4832-8d8d-9ab556eddef0")
-  
   
   const response = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
