@@ -6,8 +6,6 @@ function getElements() {
   overlay = document.querySelector(".overlay")
   overlayImage = overlay.querySelector(".overlay__photo")
   overlayCaption = overlay.querySelector(".overlay__caption")
-  // x = overlay.querySelector(".overlay__x")
-
   
   if (![wrappers, overlay, overlayImage, overlayCaption].every(Boolean)) {
     throw new Error("Could not find all Lightbox elements!")

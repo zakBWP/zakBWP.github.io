@@ -68,17 +68,13 @@
   max-width: 50rem;
 }
 
-/* .overlay__x {
-  color: white;
-  background: none;
-  border: none;
-  padding: 1rem;
-  font-size: 2.5rem;
+.header-and-back {
+  position: relative
 }
 
-.overlay__x:hover {
-  cursor: pointer;
-} */
+.back-button {
+  position: absolute;
+}
 
 .overlay__caption {
   text-align: center;
