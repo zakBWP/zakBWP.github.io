@@ -16,7 +16,7 @@ function getElements() {
   dotContainer = carousel.querySelector(".testimonials__dot-container")
 
   if (![carousel, container, rightArrow, leftArrow, dotContainer].every(Boolean)) {
-    throw new Error("Could not find all testimonial Slide elements, preserving default innerHTML...")
+    throw new Error("Could not find all testimonial slider elements!")
   }
 
   startTimer()

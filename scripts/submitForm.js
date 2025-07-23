@@ -1,29 +1,36 @@
-const submitButton = document.getElementById("submitContact") || document.getElementById("submitQuote")
+const button = document.getElementById("submit-contact") || document.getElementById("submit-quote")
+const form = document.getElementById("contact-form") || document.getElementById("quote-form")
+const isQuote = (form.id === "quote-form")
 
-const contactForm = document.getElementById("contactForm")
-
-contactForm.addEventListener("submit", async (event) => {
+async function sendRequest(event) {
   event.preventDefault()
-  submitButton.textContent = "Sending..."
+  button.textContent = "Sending..."
 
-  const formData = new FormData(contactForm)
+  const formData = new FormData(form)
   formData.append("access_key", "277083ff-40aa-4832-8d8d-9ab556eddef0")
-  
+  formData.append("subject", isQuote ? "Quote Request from cruisebooksource.com" : "Message from cruisebooksource.com")
+
   const response = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
     body: formData
   })
 
-const data = await response.json()
-
-  if (data.success) {
-    submitButton.textContent = "Message Sent Successfully"
-    contactForm.reset()
-    submitButton.style.backgroundColor = "green"
-  } else {
-    console.error("Error", data)
-    submitButton.textContent = data.message || "An error occurred"
-    submitButton.style.backgroundColor = "red"
+  if (!response.ok) {
+    throw new Error("Error with Web3Forms response: " + response.status )
   }
 
-})
+  const data = await response.json()
+
+  if (data.success) {
+    button.textContent = (isQuote ? "Quote request sent successfully" : "Message sent successfully")
+    form.reset()
+    button.style.backgroundColor = "green"
+  } else {
+    console.error("Error", data)
+    button.textContent = data.message || "An error occurred, please try again."
+    button.style.backgroundColor = "red"
+  }
+}
+
+form.addEventListener("submit", sendRequest)
+ 
