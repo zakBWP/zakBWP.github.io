@@ -34,4 +34,3 @@ async function sendRequest(event) {
 }
 
 form.addEventListener("submit", sendRequest)
- 
