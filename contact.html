@@ -94,25 +94,25 @@
         </figure>
 
         <form class="contact__form" id="contact-form">
-          <input type="hidden" name="subject" value="Message from cruisebooksource.com">
-          <input type="hidden" name="from_name" value="Cruisebook Source">
+          <!-- <input type="hidden" name="subject" value="Message from cruisebooksource.com">
+          <input type="hidden" name="from_name" value="Cruisebook Source"> -->
 
           <div>
             <label class="contact__label" for="name">Name</label>
-            <input class="contact__input" autocomplete="on" type="text" id="name" name="name"
+            <input required class="contact__input" autocomplete="on" type="text" id="name" name="name"
               placeholder="Enter your name" required>
           </div>
 
           <div>
             <label class="contact__label" for="email">Email</label>
-            <input class="contact__input" autocomplete="on" type="email" id="email" name="email"
+            <input required class="contact__input" autocomplete="on" type="email" id="email" name="email"
               placeholder="Enter your email" required>
           </div>
 
           <div>
             <label class="contact__label" for="message">Message</label>
-            <textarea class="contact__input" id="message" name="message" placeholder="Enter your message" rows="5"
-              required></textarea>
+            <textarea required class="contact__input" id="message" name="message" placeholder="Enter your message"
+              rows="5" required></textarea>
           </div>
 
           <button type="submit" class="link-button link-button--wide" id="submit-contact">Send Message</button>

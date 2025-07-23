@@ -44,7 +44,7 @@ function handleChange(event) {
 
   resetAllFields()
 
-  submitButton.classList.remove("hide") // don't use show() because it sets display to flex
+  show(quoteForm)
   quoteForm.appendChild(submitButton)
 
   switch (choice) {

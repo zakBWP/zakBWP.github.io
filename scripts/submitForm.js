@@ -9,6 +9,7 @@ async function sendRequest(event) {
   const formData = new FormData(form)
   formData.append("access_key", "277083ff-40aa-4832-8d8d-9ab556eddef0")
   formData.append("subject", isQuote ? "Quote Request from cruisebooksource.com" : "Message from cruisebooksource.com")
+  formData.append("from_name", "Cruisebook Source")
 
   const response = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
