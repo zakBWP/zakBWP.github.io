@@ -1,5 +1,6 @@
 .top-text {
 	text-align: center;
+	margin-bottom: 1rem;
 }
 
 .top-text a,
@@ -8,6 +9,32 @@
 }
 
 .scroller {
+	overflow: hidden;
+	mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+
+
+	will-change: transform;
+	transform: translateZ(0);
+	/* or backface-visibility: hidden; */
+
+}
+
+.scroller__inner {
+	display: flex;
+	gap: 1rem;
+	padding-block: 1rem;
+	flex-wrap: nowrap;
+	animation: scroll 60s linear infinite;
+	width: max-content;
+}
+
+@keyframes scroll {
+	to {
+		transform: translateX(calc(-50% - 0.5rem))
+	}
+}
+
+/* .scroller {
 	overflow: hidden;
 	-webkit-mask: linear-gradient(90deg,
 			transparent,
@@ -31,13 +58,23 @@
 .scroller__image {
 	height: 21.875rem;
 	box-shadow: var(--shadow);
-}
+} */
 
-@keyframes scroll {
+/* @keyframes scroll {
 	to {
+		-webkit-transform: translate(calc(-50% - 0.5rem));
 		transform: translate(calc(-50% - 0.5rem));
 	}
-}
+} */
+
+/* @keyframes scroll {
+	to {
+		transform: translate(calc(-50% - 0.5rem));
+		-webkit-transform: translate(calc(-50% - 0.5rem));
+	}
+} */
+
+
 
 .highlight {
 	background-color: var(--primary);

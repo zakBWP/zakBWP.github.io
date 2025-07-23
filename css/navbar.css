@@ -128,10 +128,12 @@
 .products-dropdown__content a {
   font-weight: bold;
   display: block;
-  padding: 1rem;
+  padding: 1rem 0;
   color: var(--primary);
   text-decoration: none;
   position: static;
+  text-align: center;
+  /* font-size: 0.875rem; */
 }
 
 .open {
