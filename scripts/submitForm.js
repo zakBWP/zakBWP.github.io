@@ -13,7 +13,7 @@ async function sendRequest(event) {
 	button.textContent = "Sending...";
 
 	const formData = new FormData(form);
-	formData.append("access_key", "277083ff-40aa-4832-8d8d-9ab556eddef0");
+	formData.append("access_key", "5e37433f-9c2c-4e39-92de-2890155318d5");
 	formData.append(
 		"subject",
 		isQuote
