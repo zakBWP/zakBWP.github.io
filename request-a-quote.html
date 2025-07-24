@@ -1,248 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link
+			rel="canonical"
+			href="https://www.cruisebooksource.com/request-a-quote"
+		/>
+		<!-- HTML Meta Tags -->
+		<title>Quote Request | Bluewater Publishing</title>
+		<meta
+			name="description"
+			content="Request a quote for a cruisebook or certificate order for your command!"
+		/>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="canonical" href="https://www.cruisebooksource.com/request-a-quote">
-  <!-- HTML Meta Tags -->
-  <title>Quote Request | Bluewater Publishing</title>
-  <meta name="description" content="Request a quote for a cruisebook or certificate order for your command!">
+		<!-- Facebook Meta Tags -->
+		<meta
+			property="og:url"
+			content="https://www.cruisebooksource.com/request-a-quote"
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Cruisebooks | Bluewater Publishing" />
+		<meta
+			property="og:description"
+			content="Request a quote for a cruisebook or certificate order for your command!"
+		/>
+		<meta property="og:image" content="/images/social.webp" />
 
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://www.cruisebooksource.com/request-a-quote">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Cruisebooks | Bluewater Publishing">
-  <meta property="og:description" content="Request a quote for a cruisebook or certificate order for your command!">
-  <meta property="og:image" content="/images/social.webp">
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			property="twitter:url"
+			content="https://www.cruisebooksource.com/request-a-quote"
+		/>
+		<meta name="twitter:title" content="Cruisebooks | Bluewater Publishing" />
+		<meta
+			name="twitter:description"
+			content="Request a quote for a cruisebook or certificate order for your command!"
+		/>
+		<meta name="twitter:image" content="/images/social.webp" />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.cruisebooksource.com/request-a-quote">
-  <meta name="twitter:title" content="Cruisebooks | Bluewater Publishing">
-  <meta name="twitter:description" content="Request a quote for a cruisebook or certificate order for your command!">
-  <meta name="twitter:image" content="/images/social.webp">
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="/css/global.css" />
+		<link rel="stylesheet" type="text/css" href="/css/request-a-quote.css" />
+		<link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+		<link rel="stylesheet" type="text/css" href="/css/footer.css" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" type="text/css" href="/css/global.css">
-  <link rel="stylesheet" type="text/css" href="/css/request-a-quote.css">
-  <link rel="stylesheet" type="text/css" href="/css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="/css/footer.css">
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<meta name="apple-mobile-web-app-title" content="CBS" />
+		<link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-title" content="CBS">
-  <link rel="manifest" href="/site.webmanifest">
+		<script type="module" src="scripts/hamburgerMenu.js"></script>
+		<script type="module" src="scripts/swapQuoteForm.js"></script>
+		<script type="module" src="scripts/submitForm.js"></script>
+	</head>
 
-  <script type="module" src="scripts/hamburgerMenu.js"></script>
-  <script type="module" src="scripts/swapQuoteForm.js"></script>
-  <script type="module" src="scripts/submitForm.js"></script>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar" aria-label="Main navigation">
+			<div class="navbar__container">
+				<div class="navbar__mobile-view">
+					<img
+						src="/images/logo.svg"
+						alt="Bluewater Publishing Logo"
+						class="navbar__logo"
+					/>
+					<button class="navbar__hamburger">
+						<span class="navbar__hamburger-line"></span>
+						<span class="navbar__hamburger-line"></span>
+						<span class="navbar__hamburger-line"></span>
+					</button>
+				</div>
+				<ul class="navbar__list">
+					<li class="navbar__element">
+						<a href="/" class="navbar__link">Home</a>
+					</li>
+					<li class="navbar__element">
+						<a href="/about" class="navbar__link">About</a>
+					</li>
+					<li class="navbar__element">
+						<a href="/contact" class="navbar__link">Contact</a>
+					</li>
 
-</head>
+					<li class="products-dropdown">
+						<div class="navbar__element">
+							<a href="/products" class="navbar__link">Products</a>
+						</div>
 
-<body>
+						<ul class="products-dropdown__content">
+							<li><a href="/cruisebooks">Cruisebooks</a></li>
+							<li><a href="/certificates">Certificates</a></li>
+						</ul>
+					</li>
 
-  <!-- Navbar -->
-  <nav class="navbar" aria-label="Main navigation">
-    <div class="navbar__container">
-      <div class="navbar__mobile-view">
-        <img src="/images/logo.svg" alt="Bluewater Publishing Logo" class="navbar__logo">
-        <button class="navbar__hamburger">
-          <span class="navbar__hamburger-line"></span>
-          <span class="navbar__hamburger-line"></span>
-          <span class="navbar__hamburger-line"></span>
-        </button>
-      </div>
-      <ul class="navbar__list">
-        <li class="navbar__element"><a href="/" class=" navbar__link">Home</a></li>
-        <li class="navbar__element"><a href="/about" class="navbar__link">About</a></li>
-        <li class="navbar__element"><a href="/contact" class="navbar__link">Contact</a></li>
+					<li class="navbar__element">
+						<a href="/services" class="navbar__link">Services</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- End Navbar -->
 
-        <li class="products-dropdown">
-          <div class="navbar__element"><a href="/products" class="navbar__link">Products</a></div>
+		<main class="container">
+			<section class="centered">
+				<h1 class="title">Request a Quote</h1>
 
-          <ul class="products-dropdown__content">
-            <li><a href="/cruisebooks">Cruisebooks</a></li>
-            <li><a href="/certificates">Certificates</a></li>
-          </ul>
+				<div class="quote-dropdown">
+					<label class="quote-dropdown__label" for="item-select"
+						>Choose item:</label
+					>
+					<select name="items" id="item-select" class="quote-dropdown__select">
+						<option disabled selected>Select from dropdown</option>
+						<option value="cruisebook">Cruisebook</option>
+						<option value="certificate">Certificate</option>
+					</select>
+				</div>
 
-        </li>
+				<form class="quote-form-container hide" id="quote-form">
+					<div id="quote-form--cruisebook" class="swappable">
+						<div class="quote-form__group">
+							<label class="quote-form__label">
+								Full Name
+								<input
+									required
+									name="Name"
+									autocomplete="on"
+									type="text"
+									class="quote__input"
+									placeholder="Enter your name"
+								/>
+							</label>
 
-        <li class="navbar__element"><a href="/services" class="navbar__link">Services</a></li>
-      </ul>
-    </div>
-  </nav>
-  <!-- End Navbar -->
+							<label class="quote-form__label">
+								Email Address
+								<input
+									required
+									name="Email"
+									autocomplete="on"
+									type="email"
+									class="quote__input"
+									placeholder="Enter your email"
+								/>
+							</label>
+						</div>
+						<div class="quote-form__group">
+							<label class="quote-form__label">
+								Phone Number
+								<input
+									name="Phone"
+									autocomplete="on"
+									type="tel"
+									class="quote__input"
+									placeholder="Enter your phone number"
+								/>
+							</label>
 
-  <main class="container">
-    <section class="centered">
+							<label class="quote-form__label">
+								Ship or Unit
+								<input
+									required
+									name="Ship or Unit"
+									autocomplete="off"
+									type="text"
+									class="quote__input"
+									placeholder="Enter your ship or unit"
+								/>
+							</label>
+						</div>
+						<div class="quote-form__group">
+							<label class="quote-form__label">
+								Approximate Number of Books
+								<input
+									required
+									name="Number of Books"
+									autocomplete="off"
+									type="number"
+									class="quote__input"
+									min="50"
+									placeholder="Enter number of books (minimum: 50)"
+								/>
+							</label>
+							<label class="quote-form__label">
+								Approximate Number of Pages
+								<input
+									required
+									name="Number of Pages"
+									autocomplete="off"
+									type="number"
+									class="quote__input"
+									min="48"
+									placeholder="Enter number of pages (minimum: 48)"
+								/>
+							</label>
+						</div>
+						<label class="quote-form__label">
+							Home Port or Base Location
+							<input
+								required
+								name="Homeport or Base"
+								autocomplete="off"
+								type="text"
+								class="quote__input"
+								placeholder="Enter your home port/base"
+							/>
+						</label>
+						<label class="quote-form__label">
+							Questions or Comments
+							<textarea
+								class="quote__input"
+								name="Message"
+								placeholder="Enter your message"
+								rows="3"
+							></textarea>
+						</label>
+					</div>
 
-      <h1 class="title">Request a Quote</h1>
+					<div id="quote-form--certificate" class="swappable">
+						<div class="quote-form__group">
+							<label class="quote-form__label">
+								Full Name
+								<input
+									required
+									name="Name"
+									autocomplete="on"
+									type="text"
+									class="quote__input"
+									placeholder="Enter your name"
+								/>
+							</label>
 
-      <div class="quote-dropdown">
-        <label class="quote-dropdown__label" for="item-select">Choose item:</label>
-        <select name="items" id="item-select" class="quote-dropdown__select">
-          <option disabled selected>Select from dropdown</option>
-          <option value="cruisebook">Cruisebook</option>
-          <option value="certificate">Certificate</option>
-        </select>
-      </div>
+							<label class="quote-form__label">
+								Email Address
+								<input
+									required
+									name="Email"
+									autocomplete="on"
+									type="email"
+									class="quote__input"
+									placeholder="Enter your email"
+								/>
+							</label>
+						</div>
+						<div class="quote-form__group">
+							<label class="quote-form__label">
+								Phone Number
+								<input
+									name="Phone"
+									autocomplete="on"
+									type="tel"
+									class="quote__input"
+									placeholder="Enter your phone number"
+								/>
+							</label>
 
-      <form class="quote-form-container hide" id="quote-form">
+							<label class="quote-form__label">
+								Ship or Unit
+								<input
+									required
+									name="Ship or Unit"
+									autocomplete="off"
+									type="text"
+									class="quote__input"
+									placeholder="Enter your ship or unit"
+								/>
+							</label>
+						</div>
+						<div class="quote-form__group">
+							<label class="quote-form__label">
+								Approximate Number of Certificates
+								<input
+									required
+									name="Number of Certificates"
+									autocomplete="off"
+									type="number"
+									class="quote__input"
+									min="10"
+									placeholder="Enter your phone number"
+								/>
+							</label>
+							<label class="quote-form__label">
+								Certificate Style
+								<select
+									required
+									name="Certificate Style"
+									id="cert-select"
+									class="quote-dropdown__select"
+								>
+									<option value="" disabled selected>
+										Select from dropdown
+									</option>
 
-        <div id="quote-form--cruisebook" class="swappable">
-          <div class="quote-form__group">
-            <label class="quote-form__label">
-              Full Name
-              <input required name="Name" autocomplete="on" type="text" class="quote__input"
-                placeholder="Enter your name">
-            </label>
-
-            <label class="quote-form__label">
-              Email Address
-              <input required name="Email" autocomplete="on" type="email" class="quote__input"
-                placeholder="Enter your email">
-            </label>
-          </div>
-          <div class="quote-form__group">
-            <label class="quote-form__label">
-              Phone Number
-              <input name="Phone" autocomplete="on" type="tel" class="quote__input"
-                placeholder="Enter your phone number">
-            </label>
-
-            <label class="quote-form__label">
-              Ship or Unit
-              <input required name="Ship or Unit" autocomplete="off" type="text" class="quote__input"
-                placeholder="Enter your ship or unit">
-            </label>
-          </div>
-          <div class="quote-form__group">
-            <label class="quote-form__label">
-              Approximate Number of Books
-              <input required name="Number of Books" autocomplete="off" type="number" class="quote__input" min="50"
-                placeholder="Enter number of books (minimum: 50)">
-            </label>
-            <label class="quote-form__label">
-              Approximate Number of Pages
-              <input required name="Number of Pages" autocomplete="off" type="number" class="quote__input" min="48"
-                placeholder="Enter number of pages (minimum: 48)">
-            </label>
-          </div>
-          <label class="quote-form__label">
-            Home Port or Base Location
-            <input required name="Homeport or Base" autocomplete="off" type="text" class="quote__input"
-              placeholder="Enter your home port/base">
-          </label>
-          <label class="quote-form__label">
-            Questions or Comments
-            <textarea class="quote__input" name="Message" placeholder="Enter your message" rows="3"></textarea>
-          </label>
-        </div>
-
-        <div id="quote-form--certificate" class="swappable">
-          <div class="quote-form__group">
-            <label class="quote-form__label">
-              Full Name
-              <input required name="Name" autocomplete="on" type="text" class="quote__input"
-                placeholder="Enter your name">
-            </label>
-
-            <label class="quote-form__label">
-              Email Address
-              <input required name="Email" autocomplete="on" type="email" class="quote__input"
-                placeholder="Enter your email">
-            </label>
-          </div>
-          <div class="quote-form__group">
-            <label class="quote-form__label">
-              Phone Number
-              <input name="Phone" autocomplete="on" type="tel" class="quote__input"
-                placeholder="Enter your phone number">
-            </label>
-
-            <label class="quote-form__label">
-              Ship or Unit
-              <input required name="Ship or Unit" autocomplete="off" type="text" class="quote__input"
-                placeholder="Enter your ship or unit">
-            </label>
-          </div>
-          <div class="quote-form__group">
-            <label class="quote-form__label">
-              Approximate Number of Certificates
-              <input required name="Number of Certificates" autocomplete="off" type="number" class="quote__input"
-                min="10" placeholder="Enter your phone number">
-            </label>
-            <label class="quote-form__label">
-              Certificate Style
-              <select required name="Certificate Style" id="cert-select" class="quote-dropdown__select">
-                <option value="" disabled selected>Select from dropdown</option>
-
-                <option value="Bluenose">Bluenose</option>
-                <option value="Bab-al-Mandeb">Bab-al-Mandeb</option>
-                <option value="Shellback">Shellback</option>
-                <option value="Suez Transit">Suez Transit</option>
-                <option value="Order of the Rock (STROG)">Order of the Rock (STROG)</option>
-                <option value="Around the World (Magellan)">Around the World (Magellan)</option>
-                <option value="Order of the Ditch (Panama Canal)">Order of the Ditch (Panama Canal)</option>
-                <option value="Domain of the Golden Dragon">Domain of the Golden Dragon</option>
-                <option value="Strait of Hormuz">Strait of Hormuz</option>
-                <option value="Strait of Magellan">Strait of Magellan</option>
-                <option value="Persian Excursion">Persian Excursion</option>
-                <option value="Spanish Main">Spanish Main</option>
-                <option value="Other">Other</option>
-                <!-- <option value="Decommissioning">Decommissioning</option>
+									<option value="Bluenose">Bluenose</option>
+									<option value="Bab-al-Mandeb">Bab-al-Mandeb</option>
+									<option value="Shellback">Shellback</option>
+									<option value="Suez Transit">Suez Transit</option>
+									<option value="Order of the Rock (STROG)">
+										Order of the Rock (STROG)
+									</option>
+									<option value="Around the World (Magellan)">
+										Around the World (Magellan)
+									</option>
+									<option value="Order of the Ditch (Panama Canal)">
+										Order of the Ditch (Panama Canal)
+									</option>
+									<option value="Domain of the Golden Dragon">
+										Domain of the Golden Dragon
+									</option>
+									<option value="Strait of Hormuz">Strait of Hormuz</option>
+									<option value="Strait of Magellan">Strait of Magellan</option>
+									<option value="Persian Excursion">Persian Excursion</option>
+									<option value="Spanish Main">Spanish Main</option>
+									<option value="Other">Other</option>
+									<!-- <option value="Decommissioning">Decommissioning</option>
               <option value="Plankowner">Plankowner</option>
               <option value="Realm of the Czars (Black Sea)">Realm of the Czars (Black Sea)</option> -->
-              </select>
-            </label>
-          </div>
-          <label class="quote-form__label">
-            Home Port or Base Location
-            <input required name="Homeport or Base" autocomplete="on" type="text" class="quote__input"
-              placeholder="Enter your home port/base">
-          </label>
-          <label class="quote-form__label">
-            Questions or Comments
-            <textarea class="quote__input" name="Message" placeholder="Enter your message" rows="3"></textarea>
-          </label>
+								</select>
+							</label>
+						</div>
+						<label class="quote-form__label">
+							Home Port or Base Location
+							<input
+								required
+								name="Homeport or Base"
+								autocomplete="on"
+								type="text"
+								class="quote__input"
+								placeholder="Enter your home port/base"
+							/>
+						</label>
+						<label class="quote-form__label">
+							Questions or Comments
+							<textarea
+								class="quote__input"
+								name="Message"
+								placeholder="Enter your message"
+								rows="3"
+							></textarea>
+						</label>
+					</div>
 
-        </div>
+					<button
+						type="submit"
+						class="link-button link-button--wide"
+						id="submit-quote"
+					>
+						Request a quote
+					</button>
+				</form>
+			</section>
+		</main>
 
-        <button type="submit" class="link-button link-button--wide" id="submit-quote">Request a quote</button>
+		<!-- Footer -->
 
-      </form>
+		<footer class="foot">
+			<div class="foot__container">
+				<ul class="foot__copyright">
+					<li class="foot__text">&copy; 2025 Bluewater Publishing</li>
+					<li class="foot__text">Website by Zakeri Reckmeyer</li>
+				</ul>
 
-    </section>
+				<ul class="foot__list">
+					<li class="foot__text">Bluewater Publishing</li>
+					<li class="foot__text">7348 Main Street</li>
+					<li class="foot__text">Gloucester, VA 23061</li>
+					<li class="foot__text">(800) 323-0578</li>
+					<li class="foot__text">
+						<a class="foot__email" href="mailto:support@cruisebooksource.com"
+							>support@cruisebooksource.com</a
+						>
+					</li>
+				</ul>
+			</div>
+		</footer>
 
-  </main>
-
-  <!-- Footer -->
-
-  <footer class="foot">
-    <div class="foot__container">
-
-      <ul class="foot__copyright">
-        <li class="foot__text">&copy; 2025 Bluewater Publishing</li>
-        <li class="foot__text">Website by Zakeri Reckmeyer</li>
-      </ul>
-
-      <ul class="foot__list">
-        <li class="foot__text">Bluewater Publishing</li>
-        <li class="foot__text">7348 Main Street</li>
-        <li class="foot__text">Gloucester, VA 23061</li>
-        <li class="foot__text">(800) 323-0578</li>
-        <li class="foot__text"><a class="foot__email"
-            href="mailto:support@cruisebooksource.com">support@cruisebooksource.com</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <!-- End Footer -->
-
-</body>
-
+		<!-- End Footer -->
+	</body>
 </html>
