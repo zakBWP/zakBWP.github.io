@@ -80,6 +80,8 @@ function addDots() {
 	for (let i = 0; i < testimonials.length; i++) {
 		const newSpan = document.createElement("span");
 		newSpan.classList.add("testimonials__dot");
+		newSpan.setAttribute("role", "button");
+		newSpan.setAttribute("tabindex", "0");
 		newSpan.setAttribute("aria-label", `Go to slide ${i + 1}`);
 
 		if (i === 0) {
