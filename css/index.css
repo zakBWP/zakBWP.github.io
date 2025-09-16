@@ -7,7 +7,7 @@
 	gap: 1rem;
 	padding: 0 1rem;
 	background-image: linear-gradient(
-			/* Dark blue overlay */ rgba(15, 23, 40, 0.5),
+			rgba(15, 23, 40, 0.5),
 			rgba(15, 23, 40, 0.5)
 		),
 		url("/images/cvn-hero.webp");
