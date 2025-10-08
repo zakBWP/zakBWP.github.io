@@ -128,7 +128,11 @@
 					</select>
 				</div>
 
-				<form class="quote-form-container hide" id="quote-form">
+				<form
+					class="quote-form-container hide"
+					id="quote-form"
+					enctype="multipart/form-data"
+				>
 					<div id="quote-form--cruisebook" class="swappable">
 						<div class="quote-form__group">
 							<label class="quote-form__label">
@@ -348,6 +352,17 @@
 								placeholder="Enter your message"
 								rows="3"
 							></textarea>
+						</label>
+
+						<label class="quote-form__label">
+							Recipient Roster (optional)
+							<!-- <button class="quote-form__upload-button">Upload file</button> -->
+							<input
+								type="file"
+								name="Recipient Roster"
+								class="quote-form__upload"
+								accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,.xls,.xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,.csv,text/csv,.txt,text/plain"
+							/>
 						</label>
 					</div>
 
