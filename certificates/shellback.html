@@ -63,28 +63,54 @@
 		<script type="module" src="../scripts/hamburgerMenu.js"></script>
 		<script type="module" src="../scripts/lightbox.js"></script>
 
-		<!-- Structured Data -->
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
-				"@type": "WebPage",
-				"name": "Shellback Navy Certificates",
-				"url": "https://www.cruisebooksource.com/certificates/shellback",
-				"description": "Shellback Navy certificates & achievement awards - traditional, emerald and golden shellback styles from Bluewater Publishing.",
-				"publisher": {
-					"@type": "Organization",
-					"name": "Bluewater Publishing",
-					"url": "https://www.cruisebooksource.com/",
-					"logo": {
+				"@graph": [
+					{
+						"@type": "WebPage",
+						"@id": "https://www.cruisebooksource.com/certificates/shellback",
+						"url": "https://www.cruisebooksource.com/certificates/shellback",
+						"name": "Shellback Certificate - Bluewater Publishing",
+						"isPartOf": {
+							"@id": "https://www.cruisebooksource.com/#website"
+						},
+						"primaryImageOfPage": {
+							"@id": "https://www.cruisebooksource.com/certificates/shellback/#primaryimage"
+						},
+						"image": {
+							"@id": "https://www.cruisebooksource.com/certificates/shellback/#primaryimage"
+						},
+						"thumbnailUrl": "https://www.cruisebooksource.com/images/certificates/Shellback-Trad.webp",
+						"inLanguage": "en-US",
+						"potentialAction": [
+							{
+								"@type": "ReadAction",
+								"target": [
+									"https://www.cruisebooksource.com/certificates/shellback"
+								]
+							}
+						]
+					},
+					{
 						"@type": "ImageObject",
-						"url": "https://www.cruisebooksource.com/images/logo.svg"
+						"inLanguage": "en-US",
+						"@id": "https://www.cruisebooksource.com/certificates/shellback/#primaryimage",
+						"url": "https://www.cruisebooksource.com/images/certificates/Shellback-Trad.webp",
+						"contentUrl": "https://www.cruisebooksource.com/images/certificates/Shellback-Trad.webp",
+						"width": 1047,
+						"height": 698,
+						"caption": "Shellback Certificate (Traditional Version)"
+					},
+					{
+						"@type": "WebSite",
+						"@id": "https://www.cruisebooksource.com/#website",
+						"url": "https://www.cruisebooksource.com",
+						"name": "Bluewater Publishing",
+						"description": "Bluewater Publishing is the nation's premier provider of USMC & U.S. Navy Cruisebooks, Crew Portrait photography, USMC & U.S. Navy Certificates, and PAO/DV Products.",
+						"inLanguage": "en-US"
 					}
-				},
-				"mainEntity": {
-					"@type": "ImageObject",
-					"url": "https://www.cruisebooksource.com/images/certificates/Shellback-Trad.webp",
-					"caption": "Shellback Traditional Certificate"
-				}
+				]
 			}
 		</script>
 	</head>

@@ -67,24 +67,51 @@
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
-				"@type": "WebPage",
-				"name": "Order of the Rock Navy Certificates",
-				"url": "https://www.cruisebooksource.com/certificates/order-of-the-rock",
-				"description": "Order of the Rock Navy certificates & achievement awards - traditional and contemporary styles from Bluewater Publishing.",
-				"publisher": {
-					"@type": "Organization",
-					"name": "Bluewater Publishing",
-					"url": "https://www.cruisebooksource.com/",
-					"logo": {
+				"@graph": [
+					{
+						"@type": "WebPage",
+						"@id": "https://www.cruisebooksource.com/certificates/order-of-the-rock",
+						"url": "https://www.cruisebooksource.com/certificates/order-of-the-rock",
+						"name": "Order of the Rock Certificate - Bluewater Publishing",
+						"isPartOf": {
+							"@id": "https://www.cruisebooksource.com/#website"
+						},
+						"primaryImageOfPage": {
+							"@id": "https://www.cruisebooksource.com/certificates/order-of-the-rock/#primaryimage"
+						},
+						"image": {
+							"@id": "https://www.cruisebooksource.com/certificates/order-of-the-rock/#primaryimage"
+						},
+						"thumbnailUrl": "https://www.cruisebooksource.com/images/certificates/Rock-Trad.webp",
+						"inLanguage": "en-US",
+						"potentialAction": [
+							{
+								"@type": "ReadAction",
+								"target": [
+									"https://www.cruisebooksource.com/certificates/order-of-the-rock"
+								]
+							}
+						]
+					},
+					{
 						"@type": "ImageObject",
-						"url": "https://www.cruisebooksource.com/images/logo.svg"
+						"inLanguage": "en-US",
+						"@id": "https://www.cruisebooksource.com/certificates/order-of-the-rock/#primaryimage",
+						"url": "https://www.cruisebooksource.com/images/certificates/Rock-Trad.webp",
+						"contentUrl": "https://www.cruisebooksource.com/images/certificates/Rock-Trad.webp",
+						"width": 1047,
+						"height": 698,
+						"caption": "Order of the Rock Certificate (Traditional Version)"
+					},
+					{
+						"@type": "WebSite",
+						"@id": "https://www.cruisebooksource.com/#website",
+						"url": "https://www.cruisebooksource.com",
+						"name": "Bluewater Publishing",
+						"description": "Bluewater Publishing is the nation's premier provider of USMC & U.S. Navy Cruisebooks, Crew Portrait photography, USMC & U.S. Navy Certificates, and PAO/DV Products.",
+						"inLanguage": "en-US"
 					}
-				},
-				"mainEntity": {
-					"@type": "ImageObject",
-					"url": "https://www.cruisebooksource.com/images/certificates/Rock-Trad.webp",
-					"caption": "Order of the Rock Traditional Certificate"
-				}
+				]
 			}
 		</script>
 	</head>

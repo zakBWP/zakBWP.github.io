@@ -55,28 +55,39 @@
 		<!-- Structured data -->
 		<script type="application/ld+json">
 			{
-				"@context": "http://www.schema.org",
-				"@type": "OnlineBusiness",
-				"image": "https://www.cruisebooksource.com/images/social.webp",
-				"name": "Bluewater Publishing",
-				"alternateName": "Cruisebook Source",
-				"url": "https://www.cruisebooksource.com",
-				"sameAs": ["https://cruisebooksource.com"],
-				"logo": "https://www.cruisebooksource.com/images/logo.svg",
-				"description": "Bluewater Publishing is the nation's premier provider of USMC & U.S. Navy Cruisebooks, Crew Portrait photography, USMC & U.S. Navy Certificates, and PAO/DV Products.",
-
-				"telephone": "+1-800-323-0578",
-				"address": {
-					"@type": "PostalAddress",
-					"streetAddress": "7348 Main Street",
-					"addressLocality": "Gloucester",
-					"addressRegion": "VA",
-					"postalCode": "23061",
-					"addressCountry": "US"
-				},
-				"email": "support@cruisebooksource.com"
+				"@context":"https://schema.org",
+				"@graph":[
+						{
+							"@type":"WebPage",
+							"@id":"https://www.cruisebooksource.com",
+							"url":"https://www.cruisebooksource.com",
+							"name":"Bluewater Publishing: Cruisebook Source",
+							"isPartOf":{
+									"@id":"https://www.cruisebooksource.com/#website"
+							},
+							"description":"Bluewater Publishing is the nation's premier provider of USMC & U.S. Navy Cruisebooks, Crew Portrait photography, USMC & U.S. Navy Certificates, and PAO/DV Products.",
+							"inLanguage":"en-US",
+							"potentialAction":[
+									{
+										"@type":"ReadAction",
+										"target":[
+												"https://www.cruisebooksource.com"
+										]
+									}
+							]
+						},
+						{
+							"@type":"WebSite",
+							"@id":"https://www.cruisebooksource.com/#website",
+							"url":"https://www.cruisebooksource.com/",
+							"name":"Bluewater Publishing: Cruisebook Source",
+							"description":"Bluewater Publishing is the nation's premier provider of USMC & U.S. Navy Cruisebooks, Crew Portrait photography, USMC & U.S. Navy Certificates, and PAO/DV Products.",
+							"inLanguage":"en-US"
+						}
+				]
 			}
 		</script>
+		
 		<script type="module" src="scripts/hamburgerMenu.js"></script>
 		<script type="module" src="scripts/testimonialSwitcher.js"></script>
 		<script>
