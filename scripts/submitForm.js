@@ -15,7 +15,7 @@ async function sendRequest(event) {
 	const formData = new FormData(form);
 	formData.append("access_key", "37e482f7-72f0-4a74-8d1a-9c782c403d1d");
 
-	const name = formData.get("name");
+	const name = formData.get("Name");
 
 	formData.append(
 		"subject",
