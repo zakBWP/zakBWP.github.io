@@ -23,8 +23,6 @@ async function sendRequest(event) {
 	);
 	formData.append("from_name", "Cruisebook Source");
 
-	console.log(formData);
-
 	const response = await fetch("https://api.web3forms.com/submit", {
 		method: "POST",
 		body: formData,

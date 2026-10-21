@@ -29,7 +29,6 @@ function getElements() {
 }
 
 function toggleOverlay() {
-	console.log("toggling...");
 	overlay.classList.toggle("show");
 }
 
