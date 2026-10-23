@@ -6,10 +6,8 @@ let carousel, container, rightArrow, leftArrow, dotContainer;
 
 let index = 0;
 let carouselTimer = null;
-let paused = false;
 const DELAY_MS = 7200;
-const SWIPE_THRESHOLD_PX = 50;
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const TAP_TOLERANCE_PX = 10;
 
 function getElements() {
 	carousel = document.querySelector(".testimonials__carousel");
@@ -36,16 +34,11 @@ function getElements() {
 		setTestimonial(index - 1)
 	);
 
-	addSwipe();
-
-	carousel.addEventListener("mouseenter", pause);
-	carousel.addEventListener("mouseleave", resume);
-	carousel.addEventListener("focusin", pause);
-	carousel.addEventListener("focusout", resume);
+	addTap();
 }
 
-/* Only horizontal swipes change slides, so vertical scrolling doesn't */
-function addSwipe() {
+/* A tap advances the slide; a touch that moves (scrolling) does not */
+function addTap() {
 	let startX = 0;
 	let startY = 0;
 
@@ -62,16 +55,15 @@ function addSwipe() {
 		const deltaX = event.changedTouches[0].clientX - startX;
 		const deltaY = event.changedTouches[0].clientY - startY;
 
-		if (Math.abs(deltaX) < SWIPE_THRESHOLD_PX) return;
-		if (Math.abs(deltaX) < Math.abs(deltaY)) return;
+		if (Math.abs(deltaX) > TAP_TOLERANCE_PX) return;
+		if (Math.abs(deltaY) > TAP_TOLERANCE_PX) return;
 
-		setTestimonial(deltaX < 0 ? index + 1 : index - 1);
+		setTestimonial(index + 1);
 	});
 }
 
 function startTimer() {
 	stopTimer();
-	if (paused || reducedMotion.matches) return;
 	carouselTimer = setInterval(() => setTestimonial(index + 1), DELAY_MS);
 }
 
@@ -80,16 +72,6 @@ function stopTimer() {
 		clearInterval(carouselTimer);
 		carouselTimer = null;
 	}
-}
-
-function pause() {
-	paused = true;
-	stopTimer();
-}
-
-function resume() {
-	paused = false;
-	startTimer();
 }
 
 function resetTimer() {
