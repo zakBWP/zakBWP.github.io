@@ -22,17 +22,14 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* Matches the navbar/footer so iOS Safari's status bar and overscroll areas aren't white */
-html {
-  background-color: var(--navbar);
-}
-
 body {
   /* Treating the body as a flexbox allows our footer to utilize 'margin-top: auto'*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--background);
+  /* iOS Safari tints the status bar and toolbar areas from the body's color,
+     so the body matches the navbar/footer and .container provides the white */
+  background-color: var(--navbar);
 }
 
 /* Typography */
@@ -61,11 +58,12 @@ h2 {
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1rem 6rem;
+  flex-grow: 1;
+  /* Full-width so the white background spans the page; padding keeps content within 1200px */
+  padding: 3rem max(1rem, calc((100% - 1200px) / 2 + 1rem)) 6rem;
   gap: 3rem;
   width: 100%;
+  background-color: var(--background);
 }
 
 .centered {

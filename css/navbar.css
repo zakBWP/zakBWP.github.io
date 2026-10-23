@@ -19,6 +19,10 @@
   margin: 0 auto;
 }
 
+.navbar__logo-link {
+  display: flex;
+}
+
 .navbar__logo {
   height: 3rem
 }
