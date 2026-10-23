@@ -22,11 +22,17 @@
   font-family: "Roboto", sans-serif;
 }
 
+/* Matches the navbar/footer so iOS Safari's status bar and overscroll areas aren't white */
+html {
+  background-color: var(--navbar);
+}
+
 body {
   /* Treating the body as a flexbox allows our footer to utilize 'margin-top: auto'*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--background);
 }
 
 /* Typography */
