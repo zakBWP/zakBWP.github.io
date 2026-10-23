@@ -47,6 +47,9 @@
 		<meta name="twitter:image" content="https://www.cruisebooksource.com/images/social.webp" />
 
 		<!-- Styles -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
 		<link rel="stylesheet" type="text/css" href="/css/global.css" />
 		<link rel="stylesheet" type="text/css" href="/css/certificates.css" />
 		<link rel="stylesheet" type="text/css" href="/css/navbar.css" />
@@ -60,8 +63,8 @@
 		<meta name="apple-mobile-web-app-title" content="CBS" />
 		<link rel="manifest" href="/site.webmanifest" />
 
-		<script type="module" src="../scripts/hamburgerMenu.js"></script>
-		<script type="module" src="../scripts/lightbox.js"></script>
+		<script type="module" src="/scripts/hamburgerMenu.js"></script>
+		<script type="module" src="/scripts/lightbox.js"></script>
 
 		<!-- Google tag (gtag.js) -->
 		<script
@@ -188,12 +191,13 @@
 				</div>
 				<p class="call-to-action">
 					Looking to produce certificates for your command?
-					<a href="/request-a-quote.html">Request a quote.</a>
+					<a href="/request-a-quote">Request a quote.</a>
 				</p>
 				<div class="certificate-grid">
 					<div class="lightbox-wrapper">
 						<span class="lightbox-filter">Order of the Rock Traditional</span>
 						<img
+							loading="lazy"
 							src="/images/certificates/Rock-Trad.webp"
 							alt="Order of the Rock (STROG) Traditional Certificate"
 							class="certificate-photo"
@@ -203,6 +207,7 @@
 					<div class="lightbox-wrapper">
 						<span class="lightbox-filter">Order of the Rock Contemporary</span>
 						<img
+							loading="lazy"
 							src="/images/certificates/Rock-Contemporary.webp"
 							alt="Order of the Rock (STROG) Contemporary Certificate"
 							class="certificate-photo"

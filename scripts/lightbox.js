@@ -1,4 +1,4 @@
-let wrappers, overlay, overlayImage, overlayCaption;
+let wrappers, overlay, overlayImage, overlayCaption, lastFocused;
 
 function getElements() {
 	wrappers = document.querySelectorAll(".lightbox-wrapper");
@@ -14,22 +14,40 @@ function getElements() {
 	let certificatePhoto, certificateSpan;
 
 	wrappers.forEach((wrapper) => {
-		wrapper.addEventListener("click", () => {
-			toggleOverlay();
+		wrapper.setAttribute("tabindex", "0");
+		wrapper.setAttribute("role", "button");
 
+		const open = () => {
 			certificatePhoto = wrapper.querySelector(".certificate-photo");
 			certificateSpan = wrapper.querySelector(".lightbox-filter");
 
 			overlayImage.src = certificatePhoto.src;
 			overlayImage.alt = certificateSpan.textContent;
 			overlayCaption.textContent = certificateSpan.textContent;
+
+			lastFocused = wrapper;
+			overlay.classList.add("show");
+		};
+
+		wrapper.addEventListener("click", open);
+		wrapper.addEventListener("keydown", (event) => {
+			if (event.key === "Enter" || event.key === " ") {
+				event.preventDefault();
+				open();
+			}
 		});
 	});
-	overlay.addEventListener("click", toggleOverlay);
+
+	overlay.addEventListener("click", closeOverlay);
+	document.addEventListener("keydown", (event) => {
+		if (event.key === "Escape") closeOverlay();
+	});
 }
 
-function toggleOverlay() {
-	overlay.classList.toggle("show");
+function closeOverlay() {
+	if (!overlay.classList.contains("show")) return;
+	overlay.classList.remove("show");
+	if (lastFocused) lastFocused.focus();
 }
 
 (function () {

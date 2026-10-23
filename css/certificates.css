@@ -38,7 +38,8 @@
 	align-items: center;
 }
 
-.lightbox-filter:hover {
+.lightbox-filter:hover,
+.lightbox-wrapper:focus-visible .lightbox-filter {
 	background-color: rgba(15, 23, 40, 0.75);
 	opacity: 1;
 	cursor: pointer;
